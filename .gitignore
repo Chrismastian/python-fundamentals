@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+
+# Indonesian working notes stay local (public repo content is English only)
+private-notes/
