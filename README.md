@@ -30,6 +30,7 @@ No dependencies, no framework, no install: standard library only.
 | `02b_trace.py` | printing state per loop iteration to find a logic bug (no debugger) | `assert` against `max()` |
 | `03_write_your_own.py` | writing the loop yourself instead of predicting: max, word count, dedupe keeping order | 10 test cases |
 | `04_traceback.py` | predicting the exception type and line from reading the code, then fixing each bug | 5 functions |
+| `05_trace_by_hand.py` | tracing a function by hand: what each watched variable holds after every executed line | row-by-row compare against the real trace (`sys.settrace`), 13 rows |
 
 ## Roadmap
 
