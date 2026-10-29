@@ -20,21 +20,18 @@ Print, compare, and only then fix.
 def func_1():
     """Bug: index that does not exist."""
     data = [10, 20, 30]
-    return data[3]
+    return data[2]
 
 
 def func_2():
     """Bug: key that is not in the dict."""
     profile = {"name": "Ani", "age": 25}
-    return profile["address"]
+    return profile.get("address")
 
 
 def func_3(items):
     """Bug: mutating a list while iterating over it."""
-    for item in items:
-        if item % 2 == 0:
-            items.remove(item)
-    return items
+    return [item for item in items if item % 2 != 0]
 
 
 def func_4(n):
@@ -48,16 +45,16 @@ def func_5():
     """Bug: variable referenced before assignment."""
     if True:
         x = 10
-    return y
+    return x
 
 
 # ---- YOUR PREDICTIONS (fill in the 5 lines) ----
 # Write e.g. "IndexError line 21", "KeyError 'address'", "RecursionError ...".
-PREDICTION_1 = ""
-PREDICTION_2 = ""
-PREDICTION_3 = ""
-PREDICTION_4 = ""
-PREDICTION_5 = ""
+PREDICTION_1 = "IndexError: list index out of range"
+PREDICTION_2 = "KeyError: 'address'"
+PREDICTION_3 = "RuntimeError: list changed size during iteration"
+PREDICTION_4 = "RecursionError: maximum recursion depth exceeded"
+PREDICTION_5 = "NameError: name 'y' is not defined"
 
 
 # ---- CHECKER (do not change) ----
