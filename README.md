@@ -1,5 +1,7 @@
 # Python Fundamentals — Prediction Drills
 
+[![CI](https://github.com/Chrismastian/python-fundamentals/actions/workflows/ci.yml/badge.svg)](https://github.com/Chrismastian/python-fundamentals/actions/workflows/ci.yml)
+
 Self-scoring drills for Python fundamentals. The rule is always the same:
 **write your answer down before you run the code.** A script that prints the
 answer teaches you nothing; a script that scores your prediction tells you
