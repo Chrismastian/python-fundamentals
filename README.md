@@ -34,6 +34,7 @@ No dependencies, no framework, no install: standard library only.
 | `04_traceback.py` | predicting the exception type and line from reading the code, then fixing each bug | 5 functions |
 | `05_trace_by_hand.py` | tracing a function by hand: what each watched variable holds after every executed line | row-by-row compare against the real trace (`sys.settrace`), 13 rows |
 | `06_boolean_logic.py` | `and`/`or` return an operand, short-circuit proven by a call log, plus writing "first truthy" by hand | 12 predictions + 5 written-loop cases |
+| `07_boundaries.py` | half-open `range`/slice rule: where a loop stops, negative steps, `range(len(x))` vs `enumerate(x, start=1)` | 10 predictions + 6 written-loop cases |
 
 ## Roadmap
 
