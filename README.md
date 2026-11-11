@@ -41,8 +41,29 @@ No dependencies, no framework, no install: standard library only.
 `ROADMAP.md` is the checklist this repo is built against: 41 fundamental nodes,
 each with one falsifiable pass criterion ("PASS IF ..."). A node is only ticked
 after the evidence was produced here, never after merely reading about it.
+Every ticked node carries a `PASSED` line, and a `Drill:` pointer to the file
+where that evidence was produced.
+
+Progress is a real number, not a vibe: **12 / 41**. `tests/test_roadmap.py`
+fails the build if the count, the duplicates, or an evidence-free tick ever
+drifts.
+
+## Checks
+
+```
+python tests/test_roadmap.py     # 41 unique nodes, no evidence-free tick, counts match
+python tests/test_drills_run.py  # every drill file runs; a crash fails the build
+```
+
+Both run in CI on every push. The drills' own scores are allowed to be low —
+a wrong prediction is the point — but a drill that stops running is a bug.
 
 ## Honest scope
 
 These are practice files, not a library. Nothing here is meant to be imported.
 The value is in the drill format: predict, run, compare, fix the concept.
+
+The drills are written by an AI; the answers are supposed to be filled in by a
+human. Until the `PREDICTION_n` lines are filled in and the `PART C` functions
+are written, a drill file is a lesson, not evidence. That is why the roadmap
+only ticks a node when its `PASSED` line says what was actually done.

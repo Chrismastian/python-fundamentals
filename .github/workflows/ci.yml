@@ -12,5 +12,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Check ROADMAP.md is consistent
+        run: python tests/test_roadmap.py
       - name: Run every drill file
         run: python tests/test_drills_run.py
